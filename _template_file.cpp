@@ -1,5 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
+#define rep(i, a, n) for (int i = a; i < n; i++)
+#define repe(i, a, n) for (int i = a; i <= n; i++)
+#define pb push_back
+typedef vector<int> VI;
+// Header
 
 int main()
 {
