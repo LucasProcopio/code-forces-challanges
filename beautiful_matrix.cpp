@@ -1,65 +1,64 @@
 #include <bits/stdc++.h>
-
 using namespace std;
+#define rep(i, a, n) for (int i = a; i < n; i++)
+#define repe(i, a, n) for (int i = a; i <= n; i++)
+#define pb push_back
+typedef vector<int> VI;
+//header
+int findMiddle(int n);
 int main()
 {
-  int n, cases, index_i = 0, index_x = 0, sq = 4;
-  vector<vector<int>> matrix(5);
+  ios::sync_with_stdio(0);
+  cin.tie(0);
 
-  for (int i = 0; i < 5; i++)
+  int n, r, c, ans = 0;
+  vector<vector<int>> mtrx(5, vector<int>(5));
+  rep(i, 0, 5)
   {
-    for (int x = 0; x < 5; x++)
+    rep(x, 0, 5)
     {
       cin >> n;
-      matrix[i].push_back(n);
       if (n == 1)
       {
-        index_x = x;
-        index_i = i;
+        r = i;
+        c = x;
       }
+      mtrx[i].pb(n);
     }
   }
 
-  cout << "R" << index_i << "COL" << index_x << endl;
+  ans += findMiddle(r);
+  ans += findMiddle(c);
 
-  switch (index_x)
-  {
-  case 4:
-    index_x -= 3;
-    break;
-  case 3:
-    index_x -= 2;
-    break;
-  case 2:
-    index_x -= 0;
-    break;
-  case 1:
-    index_x += 1;
-  case 0:
-    index_x += 2;
-  default:
-    break;
-  }
-
-  switch (index_i)
-  {
-  case 4:
-    index_i -= 3;
-    break;
-  case 3:
-    index_i -= 2;
-    break;
-  case 2:
-    index_i -= 0;
-    break;
-  case 1:
-    index_i += 1;
-  case 0:
-    index_i += 2;
-  default:
-    break;
-  }
-
-  cout << "R" << index_i << "COL" << index_x << "SUM" << index_x + index_i;
+  cout << ans;
   return 0;
+}
+
+int findMiddle(int n)
+{
+  int solution = 0;
+  if (n == 2)
+    return solution;
+
+  if (n > 2)
+  {
+    while (n > 2)
+    {
+      n--;
+      solution++;
+    }
+    return solution;
+  }
+
+  if (n < 2)
+  {
+    while (n < 2)
+    {
+      n++;
+      solution++;
+    }
+    return solution;
+  };
+
+  return solution;
 }
