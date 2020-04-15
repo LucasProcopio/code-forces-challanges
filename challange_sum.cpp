@@ -6,10 +6,7 @@ using namespace std;
 typedef vector<int> VI;
 //header
 
-// INCLUDE HEADER FILES NEEDED BY YOUR PROGRAM
-// SOME LIBRARY FUNCTIONALITY MAY BE RESTRICTED
-// DEFINE ANY FUNCTION NEEDED
-// FUNCTION SIGNATURE BEGINS, THIS FUNCTION IS REQUIRED
+// sums of parts challange
 int minimumTime(int numOfParts, vector<int> parts)
 {
   VI sums;
