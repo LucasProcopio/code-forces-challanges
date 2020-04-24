@@ -11,8 +11,24 @@ int main()
   ios::sync_with_stdio(0);
   cin.tie(0);
 
-  int n;
+  int n, i, p;
   cin >> n;
+  VI v(n, 0);
 
+  rep(x, 0, n)
+  {
+    cin >> v[x];
+  }
+
+  rep(a, 0, n)
+  {
+    rep(b, 0, n)
+    {
+      if (a + 1 == v[b])
+      {
+        cout << b + 1 << " ";
+      }
+    }
+  }
   return 0;
 }
