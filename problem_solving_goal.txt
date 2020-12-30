@@ -2,9 +2,9 @@
     
 ## Problems to be solved ( 300 )
 
-## Problems solved ( 1 )
+## Problems solved ( 2 )
 
-## Percentage solved ( 0.33333333333333337% )
+## Percentage solved ( 0.6666666666666667% )
 
 Author: Lucas Henrique Procopio
     
