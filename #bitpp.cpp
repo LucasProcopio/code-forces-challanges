@@ -12,7 +12,7 @@ int main()
     cin.tie(0);
 
     // code
-    int n, p = 0, m = 0, g, l;
+    int n, p = 0, m = 0;
     string s;
     cin >> n;
 
@@ -21,23 +21,12 @@ int main()
     rep(i, 0, n)
     {
         cin >> s;
-        if (s.find("--") != string::npos)
-            m++;
+        if (s.find("-") != string::npos)
+            m--;
         else
             p++;
     }
 
-    if (p > m)
-    {
-        g = p;
-        l = m;
-    }
-    else
-    {
-        g = m;
-        l = p;
-    }
-
-    cout << (g - l) << endl;
+    cout << (p + m) << endl;
     return 0;
 }
